@@ -1,0 +1,53 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Smartphone Hub - Subscribe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Smartphone Hub</h1>
+      </header>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Home</li></a><a href="phones.html"><li>Phones
+          </li></a><a href="carriers.html"><li>Carriers</li></a><a href="subscribe.html"><li>Subscribe</li>
+          </a><a href="choice.html"><li>How to choose a phone</li></a>
+        </ul>
+      </nav>
+      <main>
+        <h2>Subscribe to Newsletter Alerts</h2>
+        <p>
+          Required fields are marked with an asterisk *
+        </p>
+        <form id="newsletter" method="post" action="http://webdevbasics.net/scripts/pacific.php">
+          <label for="firstName">*First Name:</label>
+          <input type="text" name="firstName" id="firstName" required="required">
+          <label for="lastName">*Last Name:</label>
+          <input type="text" name="lastName" id="lastName" required="required">
+          <label for="forEmail">*E-mail Address:</label>
+          <input type="text" name="forEmail" id="forEmail" size="35" required="required" type="email">
+          <label for="forPhone">Phone Number:</label>
+          <input type="text" name="forPhone" id="forPhone" maxlength="12" type="tel">
+          <label for="bDate">*Birthdate:</label>
+          <input type="date" name="bDate" id="bDate" required="required">
+          <label for="about">Tell us about yourself:</label>
+          <textarea id="about" rows="2" cols="30"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </main>
+      <footer>
+        <span>
+          Copyright &copy; Smartphone Hub
+        </span><br>
+        <span>
+          Contact us at <a href="mailto:info@smartphonehub.com">info@smartphonehub.com</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
