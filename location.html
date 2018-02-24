@@ -10,8 +10,26 @@
   <link rel="stylesheet" href="styles.css">
   <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script>
+    function myMap() {
+      var myLatLng = {lat: 33.646150, lng: -112.177294};
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {
+        center: new google.maps.LatLng(33.646447, -112.177333), zoom: 10
+      };
+
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Smartphone Hub Office'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoD91ypf0kglewifkgvjkic_rgFewkIhc&callback=myMap"></script>
 </head>
-  <body>
+  <body onload=myMap()>
     <div id="wrapper">
       <header>
         <h1>Smartphone Hub</h1>
@@ -27,24 +45,18 @@
         </ul>
       </nav>
       <main>
-        <h2>How to choose the right smartphone</h2>
+        <h2>Come Visit Us!</h2>
         <p>
-          Choosing the smartphone that suites your needs, desires, and budget is
-          very difficult. You have to consider the features that are essential to your
-          needs and consider your the price as it pertains to your budget. Premium
-          features such as 4G LTE (for fast data speeds), advanced security biometrics,
-          high resolution screens, and advanced cameras will definitely jack up
-          the monetary value of a phone. Below are some videos that will present the most
-          relevant features of a phone and help you choose the right phone for you.
+          Our location is in north Glendale, AZ just off the 101 of 59th Ave. Come
+          visit us any time to see what phones we have in stock and ask questions and advice in
+          person about buying smartphones.
         </p>
-        <div>
-          <video width="637" height="360" controls="controls">
-            <source src="howtochoose.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/efNva-0sdoo?rel=0" frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <p>
+          Our address is: <br>
+          17682 N 54th Lane <br>
+          Glendale, AZ 85308
+        </p>
+        <div id="map" style="width:100%;height:500px;"></div>
       </main>
       <footer>
         <span>

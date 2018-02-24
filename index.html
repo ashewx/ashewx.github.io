@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Smartphone Hub is a site designed to help people
     buy smartphones and see information on phones based features, budget, and preference.">
-    <meta name="keywords" content="smartphone,,features,mobile,carriers">
+    <meta name="keywords" content="smartphone,features,mobile,carriers">
     <link rel="stylesheet" href="styles.css">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,50 +23,12 @@
           <li><a href="carriers.html">Carriers</a></li>
           <li><a href="choice.html">How to choose a phone</a></li>
           <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="location.html">Our Location</a></li>
         </ul>
       </nav>
       <main>
         <h2>Welcome to the Smartphone Hub!</h2>
         <div id="homeimg"><img src="multiphone.jpg" alt="Phones" height="400"></div>
-        <div>
-          <table id="featured">
-            <caption>Featured phones</caption>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Device</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1. </td>
-                <td>Galaxy S8</td>
-                <td>$549.99</td>
-              </tr>
-              <tr>
-                <td>2. </td>
-                <td>Apple iPhone X</td>
-                <td>$999.00</td>
-              </tr>
-              <tr>
-                <td>3. </td>
-                <td>Oneplus 5T</td>
-                <td>$499.99</td>
-              </tr>
-              <tr>
-                <td>4. </td>
-                <td>LG G6</td>
-                <td>$279.99</td>
-              </tr>
-              <tr>
-                <td>5. </td>
-                <td>Apple iPhone 8</td>
-                <td>$599.99</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
         <p>
           Smartphone Hub is the perfect resource to learn about smartphones
           in 2018. This is your central hub to learn more about:
@@ -79,6 +41,94 @@
         <p>
           Be sure to check out all our content and discover your next smartphone!
         </p>
+        <div style="display: inline-block;width:100%">
+          <span class="alignhalfleft">
+            <table id="featured">
+              <caption>Featured phones</caption>
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Device</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1. </td>
+                  <td>Samsung Galaxy Note 8</td>
+                  <td>$950.00</td>
+                </tr>
+                <tr>
+                  <td>2. </td>
+                  <td>Apple iPhone X</td>
+                  <td>$999.00</td>
+                </tr>
+                <tr>
+                  <td>3. </td>
+                  <td>Oneplus 5T</td>
+                  <td>$499.99</td>
+                </tr>
+                <tr>
+                  <td>4. </td>
+                  <td>LG G6</td>
+                  <td>$279.99</td>
+                </tr>
+                <tr>
+                  <td>5. </td>
+                  <td>Honor 7X</td>
+                  <td>$199.99</td>
+                </tr>
+              </tbody>
+            </table>
+          </span>
+          <span class="alignhalfright">
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="galaxynote8.jpg" style="width:100%">
+                <div class="text">Samsung Galaxy Note 8</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="iphonex.jpg" style="width:100%">
+                <div class="text">Apple iPhone X</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="oneplus5t.jpg" style="width:100%">
+                <div class="text">OncePlus 5T</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="lgg6.jpg" style="width:100%">
+                <div class="text">LG G6</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="honor7x.jpg" style="width:100%">
+                <div class="text">Honor 7X</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+          </span>
+        </div>
       </main>
       <footer>
         <span>
@@ -89,5 +139,33 @@
         </span>
       </footer>
     </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
   </body>
 </html>
